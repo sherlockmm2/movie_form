@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>电影生涯个人喜好表</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>
+            <input type="text" id="titleInput" class="title-input" value="电影生涯个人喜好表" placeholder="点击编辑标题">
+        </h1>
+        
+        <div class="grid-container">
+            <div class="cell-box" data-default-text="最爱的一部">
+                <div class="image-area">
+                    <img class="cell-image" alt="">
+                    <div class="upload-overlay">
+                        <div class="plus-icon">+</div>
+                    </div>
+                    <button class="delete-btn" title="删除图片">×</button>
+                </div>
+                <div class="text-area">
+                    <input type="text" class="cell-text" placeholder="最爱的一部" value="最爱的一部">
+                </div>
+            </div>
+            
+            <div class="cell-box" data-default-text="最佳导演">
+                <div class="image-area">
+                    <img class="cell-image" alt="">
+                    <div class="upload-overlay">
+                        <div class="plus-icon">+</div>
+                    </div>
+                    <button class="delete-btn" title="删除图片">×</button>
+                </div>
+                <div class="text-area">
+                    <input type="text" class="cell-text" placeholder="最佳导演" value="最佳导演">
+                </div>
+            </div>
+            
+            <div class="cell-box" data-default-text="最爱演员">
+                <div class="image-area">
+                    <img class="cell-image" alt="">
+                    <div class="upload-overlay">
+                        <div class="plus-icon">+</div>
+                    </div>
+                    <button class="delete-btn" title="删除图片">×</button>
+                </div>
+                <div class="text-area">
+                    <input type="text" class="cell-text" placeholder="最爱演员" value="最爱演员">
+                </div>
+            </div>
+            
+            <div class="cell-box" data-default-text="最爱导演">
+                <div class="image-area">
+                    <img class="cell-image" alt="">
+                    <div class="upload-overlay">
+                        <div class="plus-icon">+</div>
+                    </div>
+                    <button class="delete-btn" title="删除图片">×</button>
+                </div>
+                <div class="text-area">
+                    <input type="text" class="cell-text" placeholder="最爱导演" value="最爱导演">
+                </div>
+            </div>
+            
+            <div class="cell-box" data-default-text="最佳画面">
+                <div class="image-area">
+                    <img class="cell-image" alt="">
+                    <div class="upload-overlay">
+                        <div class="plus-icon">+</div>
+                    </div>
+                    <button class="delete-btn" title="删除图片">×</button>
+                </div>
+                <div class="text-area">
+                    <input type="text" class="cell-text" placeholder="最佳画面" value="最佳画面">
+                </div>
+            </div>
+            
+            <div class="cell-box" data-default-text="最佳制作">
+                <div class="image-area">
+                    <img class="cell-image" alt="">
+                    <div class="upload-overlay">
+                        <div class="plus-icon">+</div>
+                    </div>
+                    <button class="delete-btn" title="删除图片">×</button>
+                </div>
+                <div class="text-area">
+                    <input type="text" class="cell-text" placeholder="最佳制作" value="最佳制作">
+                </div>
+            </div>
+            
+            <div class="cell-box" data-default-text="最佳服化">
+                <div class="image-area">
+                    <img class="cell-image" alt="">
+                    <div class="upload-overlay">
+                        <div class="plus-icon">+</div>
+                    </div>
+                    <button class="delete-btn" title="删除图片">×</button>
+                </div>
+                <div class="text-area">
+                    <input type="text" class="cell-text" placeholder="最佳服化" value="最佳服化">
+                </div>
+            </div>
+            
+            <div class="cell-box" data-default-text="最佳摄影">
+                <div class="image-area">
+                    <img class="cell-image" alt="">
+                    <div class="upload-overlay">
+                        <div class="plus-icon">+</div>
+                    </div>
+                    <button class="delete-btn" title="删除图片">×</button>
+                </div>
+                <div class="text-area">
+                    <input type="text" class="cell-text" placeholder="最佳摄影" value="最佳摄影">
+                </div>
+            </div>
+            
+            <div class="cell-box" data-default-text="最具创意">
+                <div class="image-area">
+                    <img class="cell-image" alt="">
+                    <div class="upload-overlay">
+                        <div class="plus-icon">+</div>
+                    </div>
+                    <button class="delete-btn" title="删除图片">×</button>
+                </div>
+                <div class="text-area">
+                    <input type="text" class="cell-text" placeholder="最具创意" value="最具创意">
+                </div>
+            </div>
+            
+            <div class="cell-box" data-default-text="最佳配乐">
+                <div class="image-area">
+                    <img class="cell-image" alt="">
+                    <div class="upload-overlay">
+                        <div class="plus-icon">+</div>
+                    </div>
+                    <button class="delete-btn" title="删除图片">×</button>
+                </div>
+                <div class="text-area">
+                    <input type="text" class="cell-text" placeholder="最佳配乐" value="最佳配乐">
+                </div>
+            </div>
+            
+            <div class="cell-box" data-default-text="最佳主演">
+                <div class="image-area">
+                    <img class="cell-image" alt="">
+                    <div class="upload-overlay">
+                        <div class="plus-icon">+</div>
+                    </div>
+                    <button class="delete-btn" title="删除图片">×</button>
+                </div>
+                <div class="text-area">
+                    <input type="text" class="cell-text" placeholder="最佳主演" value="最佳主演">
+                </div>
+            </div>
+            
+            <div class="cell-box" data-default-text="最佳配角">
+                <div class="image-area">
+                    <img class="cell-image" alt="">
+                    <div class="upload-overlay">
+                        <div class="plus-icon">+</div>
+                    </div>
+                    <button class="delete-btn" title="删除图片">×</button>
+                </div>
+                <div class="text-area">
+                    <input type="text" class="cell-text" placeholder="最佳配角" value="最佳配角">
+                </div>
+            </div>
+            
+            <div class="cell-box" data-default-text="最佳反派">
+                <div class="image-area">
+                    <img class="cell-image" alt="">
+                    <div class="upload-overlay">
+                        <div class="plus-icon">+</div>
+                    </div>
+                    <button class="delete-btn" title="删除图片">×</button>
+                </div>
+                <div class="text-area">
+                    <input type="text" class="cell-text" placeholder="最佳反派" value="最佳反派">
+                </div>
+            </div>
+            
+            <div class="cell-box" data-default-text="最讨厌的角色">
+                <div class="image-area">
+                    <img class="cell-image" alt="">
+                    <div class="upload-overlay">
+                        <div class="plus-icon">+</div>
+                    </div>
+                    <button class="delete-btn" title="删除图片">×</button>
+                </div>
+                <div class="text-area">
+                    <input type="text" class="cell-text" placeholder="最讨厌的角色" value="最讨厌的角色">
+                </div>
+            </div>
+            
+            <div class="cell-box" data-default-text="最恶俗">
+                <div class="image-area">
+                    <img class="cell-image" alt="">
+                    <div class="upload-overlay">
+                        <div class="plus-icon">+</div>
+                    </div>
+                    <button class="delete-btn" title="删除图片">×</button>
+                </div>
+                <div class="text-area">
+                    <input type="text" class="cell-text" placeholder="最恶俗" value="最恶俗">
+                </div>
+            </div>
+            
+            <div class="cell-box" data-default-text="最浪漫">
+                <div class="image-area">
+                    <img class="cell-image" alt="">
+                    <div class="upload-overlay">
+                        <div class="plus-icon">+</div>
+                    </div>
+                    <button class="delete-btn" title="删除图片">×</button>
+                </div>
+                <div class="text-area">
+                    <input type="text" class="cell-text" placeholder="最浪漫" value="最浪漫">
+                </div>
+            </div>
+            
+            <div class="cell-box" data-default-text="最恐怖">
+                <div class="image-area">
+                    <img class="cell-image" alt="">
+                    <div class="upload-overlay">
+                        <div class="plus-icon">+</div>
+                    </div>
+                    <button class="delete-btn" title="删除图片">×</button>
+                </div>
+                <div class="text-area">
+                    <input type="text" class="cell-text" placeholder="最恐怖" value="最恐怖">
+                </div>
+            </div>
+            
+            <div class="cell-box" data-default-text="最性感">
+                <div class="image-area">
+                    <img class="cell-image" alt="">
+                    <div class="upload-overlay">
+                        <div class="plus-icon">+</div>
+                    </div>
+                    <button class="delete-btn" title="删除图片">×</button>
+                </div>
+                <div class="text-area">
+                    <input type="text" class="cell-text" placeholder="最性感" value="最性感">
+                </div>
+            </div>
+            
+            <div class="cell-box" data-default-text="最爽">
+                <div class="image-area">
+                    <img class="cell-image" alt="">
+                    <div class="upload-overlay">
+                        <div class="plus-icon">+</div>
+                    </div>
+                    <button class="delete-btn" title="删除图片">×</button>
+                </div>
+                <div class="text-area">
+                    <input type="text" class="cell-text" placeholder="最爽" value="最爽">
+                </div>
+            </div>
+            
+            <div class="cell-box" data-default-text="最感动">
+                <div class="image-area">
+                    <img class="cell-image" alt="">
+                    <div class="upload-overlay">
+                        <div class="plus-icon">+</div>
+                    </div>
+                    <button class="delete-btn" title="删除图片">×</button>
+                </div>
+                <div class="text-area">
+                    <input type="text" class="cell-text" placeholder="最感动" value="最感动">
+                </div>
+            </div>
+            
+            <div class="cell-box" data-default-text="最烧脑">
+                <div class="image-area">
+                    <img class="cell-image" alt="">
+                    <div class="upload-overlay">
+                        <div class="plus-icon">+</div>
+                    </div>
+                    <button class="delete-btn" title="删除图片">×</button>
+                </div>
+                <div class="text-area">
+                    <input type="text" class="cell-text" placeholder="最烧脑" value="最烧脑">
+                </div>
+            </div>
+            
+            <div class="cell-box" data-default-text="最有趣">
+                <div class="image-area">
+                    <img class="cell-image" alt="">
+                    <div class="upload-overlay">
+                        <div class="plus-icon">+</div>
+                    </div>
+                    <button class="delete-btn" title="删除图片">×</button>
+                </div>
+                <div class="text-area">
+                    <input type="text" class="cell-text" placeholder="最有趣" value="最有趣">
+                </div>
+            </div>
+            
+            <div class="cell-box" data-default-text="最震撼">
+                <div class="image-area">
+                    <img class="cell-image" alt="">
+                    <div class="upload-overlay">
+                        <div class="plus-icon">+</div>
+                    </div>
+                    <button class="delete-btn" title="删除图片">×</button>
+                </div>
+                <div class="text-area">
+                    <input type="text" class="cell-text" placeholder="最震撼" value="最震撼">
+                </div>
+            </div>
+            
+            <div class="cell-box" data-default-text="最过瘾">
+                <div class="image-area">
+                    <img class="cell-image" alt="">
+                    <div class="upload-overlay">
+                        <div class="plus-icon">+</div>
+                    </div>
+                    <button class="delete-btn" title="删除图片">×</button>
+                </div>
+                <div class="text-area">
+                    <input type="text" class="cell-text" placeholder="最过瘾" value="最过瘾">
+                </div>
+            </div>
+            
+            <div class="cell-box" data-default-text="最看不懂">
+                <div class="image-area">
+                    <img class="cell-image" alt="">
+                    <div class="upload-overlay">
+                        <div class="plus-icon">+</div>
+                    </div>
+                    <button class="delete-btn" title="删除图片">×</button>
+                </div>
+                <div class="text-area">
+                    <input type="text" class="cell-text" placeholder="最看不懂" value="最看不懂">
+                </div>
+            </div>
+            
+            <div class="cell-box" data-default-text="最多遍">
+                <div class="image-area">
+                    <img class="cell-image" alt="">
+                    <div class="upload-overlay">
+                        <div class="plus-icon">+</div>
+                    </div>
+                    <button class="delete-btn" title="删除图片">×</button>
+                </div>
+                <div class="text-area">
+                    <input type="text" class="cell-text" placeholder="最多遍" value="最多遍">
+                </div>
+            </div>
+            
+            <div class="cell-box" data-default-text="后悔之作">
+                <div class="image-area">
+                    <img class="cell-image" alt="">
+                    <div class="upload-overlay">
+                        <div class="plus-icon">+</div>
+                    </div>
+                    <button class="delete-btn" title="删除图片">×</button>
+                </div>
+                <div class="text-area">
+                    <input type="text" class="cell-text" placeholder="后悔之作" value="后悔之作">
+                </div>
+            </div>
+            
+            <div class="cell-box" data-default-text="最被低估">
+                <div class="image-area">
+                    <img class="cell-image" alt="">
+                    <div class="upload-overlay">
+                        <div class="plus-icon">+</div>
+                    </div>
+                    <button class="delete-btn" title="删除图片">×</button>
+                </div>
+                <div class="text-area">
+                    <input type="text" class="cell-text" placeholder="最被低估" value="最被低估">
+                </div>
+            </div>
+            
+            <div class="cell-box" data-default-text="最具象征意义">
+                <div class="image-area">
+                    <img class="cell-image" alt="">
+                    <div class="upload-overlay">
+                        <div class="plus-icon">+</div>
+                    </div>
+                    <button class="delete-btn" title="删除图片">×</button>
+                </div>
+                <div class="text-area">
+                    <input type="text" class="cell-text" placeholder="最具象征意义" value="最具象征意义">
+                </div>
+            </div>
+            
+            <div class="cell-box" data-default-text="最近一部">
+                <div class="image-area">
+                    <img class="cell-image" alt="">
+                    <div class="upload-overlay">
+                        <div class="plus-icon">+</div>
+                    </div>
+                    <button class="delete-btn" title="删除图片">×</button>
+                </div>
+                <div class="text-area">
+                    <input type="text" class="cell-text" placeholder="最近一部" value="最近一部">
+                </div>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button id="exportBtn">导出图片</button>
+            <button id="clearAllBtn">清空所有</button>
+        </div>
+    </div>
+    
+    <input type="file" id="fileInput" accept="image/*" style="display: none;">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "SimSun", "宋体", serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 15px;
+}
+
+.container {
+    max-width: 850px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    color: #000;
+    font-family: "SimSun", "宋体", serif;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.title-input {
+    background: none;
+    border: none;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #000;
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-family: "SimSun", "宋体", serif;
+}
+
+.title-input:hover {
+    background-color: #f0f0f0;
+}
+
+.title-input:focus {
+    outline: none;
+    background-color: #e8f4f8;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 4px;
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 15px auto;
+    padding: 4px;
+    background-color: white;
+}
+
+.cell-box {
+    border: 2px solid #000;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 200px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.image-area {
+    position: relative;
+    width: 100%;
+    height: 170px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.cell-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+    cursor: pointer;
+}
+
+.cell-image.visible {
+    display: block;
+}
+
+.upload-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+.upload-overlay.hidden {
+    opacity: 0;
+}
+
+.plus-icon {
+    font-size: 56px;
+    color: #ccc;
+    font-weight: bold;
+    line-height: 1;
+    -webkit-user-select: none;
+    user-select: none;
+    transition: color 0.3s ease;
+}
+
+.image-area:hover .plus-icon {
+    color: #007acc;
+}
+
+.text-area {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 4px;
+    background-color: white;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    flex-shrink: 0;
+}
+
+.cell-text {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: none;
+    text-align: center;
+    font-size: 18px;
+    color: #000;
+    padding: 0 3px;
+    outline: none;
+    resize: none;
+    overflow: hidden;
+    line-height: 30px;
+    font-weight: bold;
+    font-family: "SimSun", "宋体", serif;
+}
+
+.cell-text::placeholder {
+    color: #000;
+    font-family: "SimSun", "宋体", serif;
+    font-weight: bold;
+}
+
+.delete-btn {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    width: 18px;
+    height: 18px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 11px;
+    line-height: 1;
+    display: none;
+    z-index: 10;
+}
+
+.delete-btn:hover {
+    background: darkred;
+}
+
+.cell-image.visible ~ .delete-btn {
+    display: block;
+}
+
+.image-area:hover .delete-btn {
+    display: block;
+}
+
+.image-area.dragover {
+    background-color: #e8f4f8;
+    border: 2px dashed #007acc;
+}
+
+.controls {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.controls button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007acc;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+    font-family: "SimSun", "宋体", serif;
+    font-weight: bold;
+}
+
+.controls button:hover {
+    background-color: #005a9e;
+}
+
+/* 简化的打印样式（备用） */
+@media print {
+    .controls {
+        display: none !important;
+    }
+    
+    .delete-btn {
+        display: none !important;
+    }
+    
+    .plus-icon {
+        display: none !important;
+    }
+    
+    .upload-overlay {
+        display: none !important;
+    }
+}
+
+/* 移动设备适配 */
+@media (max-width: 768px) {
+    .container {
+        padding: 8px;
+        border-radius: 4px;
+    }
+    
+    .title-input {
+        font-size: 24px;
+    }
+    
+    .grid-container {
+        max-width: 100%;
+        gap: 2px;
+    }
+    
+    .cell-box {
+        height: 140px;
+    }
+    
+    .image-area {
+        height: 115px;
+    }
+    
+    .text-area {
+        height: 25px;
+    }
+    
+    .cell-text {
+        font-size: 14px;
+        line-height: 25px;
+        font-weight: bold;
+    }
+    
+    .controls {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .controls button {
+        width: 180px;
+        font-size: 16px;
+    }
+} 

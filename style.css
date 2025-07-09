@@ -365,3 +365,75 @@ h1 {
   min-height: 44px;
   font-size: 1.1rem;
 }
+/* 手机端每行显示2个cell-box，超小屏幕自动1个 */
+@media (max-width: 700px) {
+  .grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  .cell-box {
+    width: 47vw;           /* 每行2个，留出间距 */
+    max-width: 220px;
+    min-width: 140px;
+    margin: 0 0 10px 0;
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .image-area {
+    width: 100%;
+    height: 24vw;          /* 高度自适应，和宽度成比例 */
+    max-height: 110px;
+    min-height: 70px;
+    margin-bottom: 6px;
+  }
+  .cell-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+  }
+  .text-area {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2px;
+  }
+  .cell-text {
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 4px 0;
+    text-align: center;
+  }
+  .controls {
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 12px;
+    width: 100%;
+    align-items: center;
+  }
+  #exportBtn, #clearAllBtn {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 12px 0;
+    margin-bottom: 6px;
+    border-radius: 8px;
+  }
+}
+
+/* 超小屏幕（如iPhone SE）每行1个cell-box */
+@media (max-width: 400px) {
+  .cell-box {
+    width: 96vw;
+    min-width: 0;
+    max-width: 100vw;
+  }
+  .image-area {
+    height: 32vw;
+    max-height: 80px;
+    min-height: 50px;
+  }
+}
